@@ -1,26 +1,22 @@
 .container{
     width: 100vw;
-    
-    
     display: flex;
-   
+    flex-wrap: wrap;
     gap: 20px;
     overflow: hidden;
     box-shadow: black;
-    
-
 }
 
 .box{
     width: 450px;
     height: 600px;
     border: 5px solid gray;
-    
     overflow: hidden;
     border-radius: 20px;
     align-items: right;
     justify-content: center;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .heading{
@@ -42,5 +38,28 @@
     border-radius: 20px;
     background-color: blue;
     color: white;
-
 }
+
+@media (max-width: 768px) {
+    .container {
+        gap: 10px; 
+    }
+    .btn {
+        padding: 8px 15px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 90%; 
+    }
+    .container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    .btn {
+        width: 100%; 
+        padding: 12px 0; 
+    }
+}
+
